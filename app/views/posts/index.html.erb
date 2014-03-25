@@ -1,0 +1,9 @@
+
+<div class="row">
+  <% @posts.each do |post| %>
+    <div class="postBlock col-md-3">
+      <h4><%= post.title%></h5>
+      <p><%= post.description%></p>
+    </div>
+  <% end %>
+</div>
