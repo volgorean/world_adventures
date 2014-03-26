@@ -15,17 +15,14 @@
 development:
   adapter: postgresql
   database: world_adventures_development
-  #username: world_adventures
-  #password:
+
 
 test:
   adapter: postgresql
   database: world_adventures_test
-  #username: world_adventures
-  #password:
+
 
 production:
   adapter: postgresql
   database: world_adventures_production
-  #username: world_adventures
-  #password:
+
