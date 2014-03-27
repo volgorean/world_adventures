@@ -3,5 +3,4 @@ WorldAdventures::Application.routes.draw do
   root 'posts#index'
   get 'post/:id', :to => 'posts#show'
   get '/new', :to => 'posts#new'
-
 end

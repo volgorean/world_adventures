@@ -1,6 +1,19 @@
 <h1><%= @post.title %></h1>
+<div class="main_image_box">
+	<img class="main_image" src=<%= @post.main_image%>>
+</div>
+<%= @post.description %>
+
+<%= form_for @contact, :url => '/contacts', :method => 'post' do |f| %>
+  <%= f.label :comment %>
+  <%= f.text_field :comment %>
+  <%= f.submit %>
+<% end %>
 
 <ul>
-  <li><%= @post.title %></li>
-  <li><%= @post.description %></li>
+	<div class="well">
+	<% @comments.each do |comment| %>
+		<li><%= comment.comment%></li>
+	<% end %>
+	</div>
 </ul>

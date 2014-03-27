@@ -1,11 +1,25 @@
 <div newPostWrapper>
 	<%= form_for @post, :url => '/posts', :method => 'post' do |f| %>
 	<div class="row">
-	  <%= f.text_field :title %>
+		<div class="col-md-3"></div>
+		<div class="col-md-6">
+			<div class="row">
+				<h3>Title</h3>
+				<%= f.text_field :title %>
+			</div>
+			<div class="row">
+				<h3>Description</h3>
+			  	<%= f.text_area :description %>
+			</div>
+			<div class="row">
+				<h3>Image</h3>
+				<h5>Give us a direct link please</h5>
+			  	<%= f.text_field :main_image %>
+			</div>
+			  	<%= f.submit %>
+			<% end %>
+			
+		</div>
+		<div class="col-md-3"></div>
 	</div>
-	<div class="row">
-	  <%= f.text_area :description %>
-	</div>
-	  <%= f.submit %>
-	<% end %>
 </div>

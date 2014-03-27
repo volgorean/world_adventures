@@ -16,9 +16,18 @@ ActiveRecord::Schema.define(version: 20140325010025) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
+  create_table "comments", force: true do |t|
+    t.string   "comment"
+    t.integer  "post_id"
+    t.integer  "comment_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "posts", force: true do |t|
     t.string   "title"
     t.text     "description"
+    t.text     "main_image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
